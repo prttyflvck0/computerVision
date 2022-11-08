@@ -1,14 +1,11 @@
-import numpy as np
 import cv2
+import numpy as np
 from collections import Counter, defaultdict
-
 # путь к певому кадру
 firstframe_path = r'firstFrames\firstFrame.jpg'
-
 firstframe = cv2.imread(firstframe_path)
 firstframe_gray = cv2.cvtColor(firstframe, cv2.COLOR_BGR2GRAY)
 firstframe_blur = cv2.GaussianBlur(firstframe_gray, (21, 21), 0)
-
 # ---------------------------------
 # ресайз окон вручную
 # ---------------------------------
@@ -104,8 +101,6 @@ try:
 
                         track_master = list(track_temp2)
                         track_temp2 = []
-
-
 
                     countcxcy = Counter(i for i, j in track_master)
                     # print countcxcy
