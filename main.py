@@ -3,7 +3,7 @@ import cv2
 from collections import Counter, defaultdict
 
 # путь к певому кадру
-firstframe_path = r'E:\Downloads\firstFrame.jpg'
+firstframe_path = r'firstFrames\firstFrame.jpg'
 
 firstframe = cv2.imread(firstframe_path)
 firstframe_gray = cv2.cvtColor(firstframe, cv2.COLOR_BGR2GRAY)
@@ -17,7 +17,7 @@ cv2.namedWindow('Abandoned Object Detection', cv2.WINDOW_NORMAL)
 # cv2.namedWindow('Morph_CLOSE', cv2.WINDOW_NORMAL)
 
 # путь к видео
-file_path = r'E:\Downloads\video4.mp4'
+file_path = r'videos\video2.mp4'
 
 cap = cv2.VideoCapture(file_path)
 
